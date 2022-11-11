@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Welcome to Cerebrate Project Documentation 
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Cerebrate is an [open-source platform](https://github.com/cerebrate-project) meant to act as a trusted contact information provider and interconnection orchestrator for other security tools (such as [MISP](https://www.misp-project.org/)). 
 
-## Commands
+## Cerebrate Documentation layout
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- [Overall Usage](/usage)
+- [Administration](/administration)
+- [Auditing](/auditing)
+- [Install](/install)
 
-## Project layout
+# Project Funding
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+![melicertes logo](https://www.cerebrate-project.org/assets/images/logo/melicertes.png)
+
+This project has been co-funded by **“[Connecting Europe Facility – Cybersecurity Digital Service Infrastructure Maintenance and Evolution of Core Service Platform Cooperation Mechanism for CSIRTs – MeliCERTes Facility](https://digital-strategy.ec.europa.eu/en/news/open-platforms-collaborate-cyber-threats)” (SMART 2018/1024)** and [CIRCL](https://www.circl.lu/) Computer Incident Response Center Luxembourg. 

@@ -48,7 +48,7 @@ flowchart LR
     - Under the Mappers section, add the following mappings:
         - **org_name**, **org_uuid**, **role_name**, **role_uuid**
         - make sure that all of the mappins look as the screenshot below:
-        ![](http://hdoc.csirt-tooling.org/uploads/upload_9cb2db516cd0b1d73a64a238954421cc.png)
+        ![](/assets/screenshots/uploads/upload_9cb2db516cd0b1d73a64a238954421cc.png)
     - Under Service Account Roles:
         - Make sure that under the "realm management" Client roles the following are enabled:
             - create-client

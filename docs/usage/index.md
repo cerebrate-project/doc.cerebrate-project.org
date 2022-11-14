@@ -20,3 +20,9 @@ When login in Cerebrate, the user get a main page with some activity statistics.
 </figure>
 
 The top menu includes a user setting link and a notification inbox.
+
+## Global search
+
+A global search is available in Cerebrate. This search allows to search in all the different elements and easily find a specific user, organisations, sharing groups...
+
+![](/assets/screenshots/global-search.png)

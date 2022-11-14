@@ -184,8 +184,43 @@ flowchart
 - Error logs, debug output and stack traces are stored in the /var/www/cerebrate/logs directory
 
 ## Enforcing tooling permission limits
-- In some cases, encorcing additional limitations on the community, such as the number of allowed users in Mattermost, also are desired by communities with limited resources or accessed to under-provisioned services.
+- In some cases, enforcing additional limitations on the community, such as the number of allowed users in Mattermost, also are desired by communities with limited resources or accessed to under-provisioned services.
 - To create such limitations, navigate to the **Permission limitations** interface (Instance -> Permission limitations)
     - Add rules that restrict permissions based on their scope (**global** and **organisation** specific scopes)
 ![](/assets/screenshots/upload_9c154fba9bec5434eb1b8a8275121e5d.png)
+- This will ensure that users cannot be created if the limits are not adhered to
 
+
+## Meta field templates
+- **Meta field templates** allow for the extension of built in data-models (currently supported: **Users**, **Individuals**, **Organisations**).
+- They are derived from JSON files found in `/var/www/cerebrate/libraries/default/meta_fields`
+- To add custom **meta-femplates**, simply drop a JSON document of the expected format in `/var/www/cerebrate/libraries/custom/meta_fields`
+![](/assets/screenshots/upload_06d8a9cb66259a1c4cb26a2dda0b3035.png)
+
+- When creating a new **meta-template** make sure that the name is unique and the namespace consistent with your other **meta-templates**.
+- Fields are added as key-values, simply add a new unique `field_name` - `type` combination. You can also optionally add the `regex` and `multiple` fields. The former allows for custom validation scripts the latter for fields that allow multiple values.
+- Ensure that you use a unique **UUID** for each **meta-template**
+- If you are updating and existing **meta-template** make sure that you increment the `version` field. This is used by **Cerebrate** to deduce whether the given **meta-template** requires an update
+
+## Settings 
+- **Cerebrate** differentiates between two sets of settings
+    - **User settings** modify the look and feel and some base behaviours of the tool and are administered by individual users
+    - **Instance settings** are configured by administrators using the Instance -> settings menu
+![](/assets/screenshots/upload_ea5891a256f8eaced523531f7584da2e.png)
+- Settings are validated and enforced by the system. Validation issues are displayed under the setting.
+- Make sure that you check back to see if new settings have been added after each **Cerebrate** update
+
+## Updating Cerebrate
+
+Updating Cerebrate is a simple process in most cases requiring you to follow the steps outlined below:
+
+- Update the code base
+    - `cd /var/www/cerebrate` to step into the **Cerebrate** directory
+    - `git pull origin main && git submodule sync && git submodule update --init --recursive` to fetch the latest code-base and update submodules
+    - `su www-data -c "/var/www/cerebrate/composer update"` to update the dependencies
+
+- Once done, log into Cerebrate and navigate to the **database updates** section (Instance -> Database)
+![](/assets/screenshots/upload_edd2b7893a13926c3fed7e44e963d74a.png)
+- If you see pending updates, execute all
+
+- If anything goes wrong during the update, it will be noted in the **Audit logs**

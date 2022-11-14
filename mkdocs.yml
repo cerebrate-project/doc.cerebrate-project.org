@@ -1,5 +1,8 @@
 site_name: Cerebrate Project Documentation - doc.cerebrate-project.org
 site_url: https://doc.cerebrate-project.org
+repo_url: https://github.com/cerebrate-project/doc.cerebrate-project.org
+edit_uri: edit/main/docs/
+
 theme:
     name: material
     logo: assets/logo/logo.svg

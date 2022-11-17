@@ -128,7 +128,28 @@ flowchart
 - You can either directly create a new **individual** or associate a **user** to be created with an existing one.
 - Control additional **permissions to other tools** managed by Keycloak via the CNW permission **meta-template**
 
-![](/assets/screenshots/uploads/upload_d06a9551d06785946912a4de31c6c4b5.png)
+#### Enrolling users
+
+- To enroll a **User**, simply navigate Users -> Add User
+
+![](/assets/screenshots/add_user.png)
+
+- Then fill out the **User** add form as described above
+- If the **Individual** is not yet created, create a new one directly from this form
+- Make sure that you choose the correct **Organisation** and **Role** associated with the new **User** - if either of these do not exist yet, make sure you create them using the **Organisation** or **Role** creation forms first.
+- As a best practice recommendation, using the same **username** as the individual's **email** address is recommended
+
+![](/assets/screenshots/upload_d06a9551d06785946912a4de31c6c4b5.png)
+
+- If you wish to update a **User** simply use the **edit** action button on the right side of the **User** index, or the **Edit** quicklink button on the **User** view.
+
+![](/assets/screenshots/add_user2.png)
+
+![](/assets/screenshots/add_user3.png)
+
+- It is never recommended to **delete** as **User** - rather always disable them. This is great for auditability. To disable a **User**, simply click the disabled checkbox in the **User** **index**.
+
+![](/assets/screenshots/add_user4.png)
 
 - **Users** have authentication information attached to them, in the form of a password (disabled when in KeyCloak only mode) and API keys
 

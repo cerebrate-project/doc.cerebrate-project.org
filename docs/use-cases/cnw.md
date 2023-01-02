@@ -28,7 +28,7 @@ graph TD
     E --> F[Administrator connects to the target applications <br>to disable the user manually]
     F --> G[Disabled user cannot access the RH-SSO <br>and the target applications]
    G --> H[END]
- ```  
+```  
  
 ## Delete
  
@@ -45,7 +45,7 @@ graph TD
     D --> E[END]
     C --> |YES| F[User is deleted from both <br>Cerebrate and RH-SSO successfully]
     F --> G[END]
- ```  
+```  
  
 ## Access Request
  
@@ -60,7 +60,7 @@ graph TD
     D --> E[Cerebrate provisions the updated access to RH-SSO automatically. <br>Notification is sent to the Administrator for the assignment. <br>User can now access the requested application]
     E --> F[The Administrator of the target application assigns <br>to the user manually any other accesses/rights <br>that are needed inside the application]
     F --> G[END]
- ``` 
+``` 
 
 
 

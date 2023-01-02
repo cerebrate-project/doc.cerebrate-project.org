@@ -30,7 +30,7 @@ graph TD
    G --> H[END]
  ```  
  
- ## Delete
+## Delete
  
 Process that describes the flow when a user should be removed from the system at all.
 Administrators will be able to remove a user at all from Cerebrate, only if the user has already been removed from RH-SSO. The same process is followed for every user role (Administrator, Team Representative etc.). 
@@ -47,7 +47,7 @@ graph TD
     F --> G[END]
  ```  
  
- ## Access Request
+## Access Request
  
 Process that describes the flow when a user needs and requests additional access to a resource.
 User can only request an access to an additional application by contacting the Team Representative. Any other accesses or permissions inside the application need to be assigned manually by the Application Administrator. The same process is followed for every user role (Administrator, Team Representative etc.).

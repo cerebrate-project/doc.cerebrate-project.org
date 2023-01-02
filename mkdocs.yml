@@ -9,11 +9,14 @@ theme:
     features:
         - navigation.tabs
         - navigation.tracking
+        - search.highlight
+        - search.share
 plugins:
   - social:
       cards_color:
         fill: "#0FF1CE" 
         text: "#FFFFFF"
+  - search
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:

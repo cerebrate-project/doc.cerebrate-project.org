@@ -25,7 +25,7 @@ flowchart LR
 
 
 
-## Keycloak configuration
+## Keycloak configuration 
 
 - As a first step, create a Realm with OpenID endpoint configuration
     - The realm's name is to be used by all other tools relying on Cerebrate's user management
@@ -39,7 +39,12 @@ flowchart LR
     - Service accounts, Authorization and Direct Access Grants need to be enabled
     - Redirect URIs and the Base URL need to point to Cerebrate's baseurl as listed below (Valid redirect URIs are ``https://path.to.your.cerebrate/*`` whilst the base url is ``https://path.to.your.cerebrate``)
 
+        - in Keycloak "old admin" UI (<21):
 ![](/assets/screenshots/upload_6142aab432e0ea718dadbca64c1a2ff6.png)
+
+        - in Keycloak "new admin" UI (>21):
+![](/assets/screenshots/client1.png)
+![](/assets/screenshots/client_capabilities.png)
 
 - Once the Client is added, some additional configurations have to be undertaken:
     - Under the Credentials section:
@@ -48,16 +53,32 @@ flowchart LR
     - Under the Mappers section, add the following mappings:
         - **org_name**, **org_uuid**, **role_name**, **role_uuid**
         - make sure that all of the mappins look as the screenshot below:
-        ![](/assets/screenshots/uploads/upload_9cb2db516cd0b1d73a64a238954421cc.png)
+            - in Keycloak "old admin" UI (<21):
+![](/assets/screenshots/upload_9cb2db516cd0b1d73a64a238954421cc.png)
+
+            - in Keycloak "new admin" UI (>21):
+![](/assets/screenshots/mappers.png)
+![](/assets/screenshots/mapper-by-config.png)
+![](/assets/screenshots/mapper-attribute.png)
+![](/assets/screenshots/mapper.png)
+
     - Under Service Account Roles:
         - Make sure that under the "realm management" Client roles the following are enabled:
             - create-client
             - manage-clients
             - manage-users
 
+            - in Keycloak "old admin" UI (<21):
 ![](/assets/screenshots/upload_36758978dc12c719ce573650d0522e34.png)
 
+            - in Keycloak "new admin" UI (>21):
+![](/assets/screenshots/sar-assign-role.png)
+![](/assets/screenshots/sar-filter-by-clients.png)
+![](/assets/screenshots/sar-assign-client-role.png)
 
+## Keycloak version > 22
+Start keycloak with the following flag for a smooth logout:
+`--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true`
 
 ## Cerebrate configuration
 

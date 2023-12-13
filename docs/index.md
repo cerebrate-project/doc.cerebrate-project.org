@@ -7,7 +7,10 @@ Cerebrate is an [open-source platform](https://github.com/cerebrate-project) mea
 - [Overall Usage](/usage)
 - [Administration](/administration)
 - [Auditing](/auditing)
+- [Importing](/importing)
 - [Install](/install)
+- [Usage](/Usage)
+- [Use cases for the CSIRTs network](/use-cases/cnw)
 
 # Project Funding
 

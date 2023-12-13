@@ -1,4 +1,4 @@
-# Importing data into Cerebrate using the **importer** CLI tool
+# CLI Tools usage - Importing data into Cerebrate using the **importer** CLI tool
 
 Populating Cerebrate with data is straightforward using the built-in **importer** tool available by default on every instance.
 

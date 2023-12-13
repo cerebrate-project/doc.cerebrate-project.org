@@ -17,6 +17,7 @@ plugins:
         fill: "#0FF1CE" 
         text: "#FFFFFF"
   - search
+  - glightbox
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -27,6 +28,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - tables
+  - footnotes
   - attr_list
   - md_in_html
   - attr_list

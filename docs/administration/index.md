@@ -236,13 +236,13 @@ flowchart
 ## Meta field templates
 - **Meta field templates** allow for the extension of built in data-models (currently supported: **Users**, **Individuals**, **Organisations**).
 - They are derived from JSON files found in `/var/www/cerebrate/libraries/default/meta_fields`
-- To add custom **meta-femplates**, simply drop a JSON document of the expected format in `/var/www/cerebrate/libraries/custom/meta_fields`
+- To add custom **meta-templates**, simply drop a JSON document of the expected format in `/var/www/cerebrate/libraries/custom/meta_fields`
 ![](/assets/screenshots/upload_06d8a9cb66259a1c4cb26a2dda0b3035.png)
 
 - When creating a new **meta-template** make sure that the name is unique and the namespace consistent with your other **meta-templates**.
 - Fields are added as key-values, simply add a new unique `field_name` - `type` combination. You can also optionally add the `regex` and `multiple` fields. The former allows for custom validation scripts the latter for fields that allow multiple values.
 - Ensure that you use a unique **UUID** for each **meta-template**
-- If you are updating and existing **meta-template** make sure that you increment the `version` field. This is used by **Cerebrate** to deduce whether the given **meta-template** requires an update
+- If you are updating an existing **meta-template** make sure that you increment the `version` field. This is used by **Cerebrate** to deduce whether the given **meta-template** requires an update.
 
 ## Settings 
 - **Cerebrate** differentiates between two sets of settings
